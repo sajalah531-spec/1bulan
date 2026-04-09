@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Anniversary ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* HALAMAN LOGIN */
+    #loginPage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      flex-direction: column;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      margin: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* HALAMAN ROMANTIS */
+    #lovePage {
+      display: none;
+      height: 100vh;
+      background: url('sajalah.jpg') no-repeat center center/cover;
+      position: relative;
+      color: white;
+    }
+
+    /* overlay biar tulisan kebaca */
+    #lovePage::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2;
+      max-width: 80%;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<div id="loginPage">
+  <h2>Masukin Tanggal Jadian Kita 💕</h2>
+  <input type="password" id="password" placeholder="DDMMYYYY">
+  <button onclick="checkPassword()">Masuk</button>
+  <p id="error" style="color:red;"></p>
+</div>
+
+<div id="lovePage">
+  <div class="text">
+    <h1>Happy Anniversary sayang ❤️</h1>
+    <p>
+      "Dalam bisikan angin, aku mendengar namamu,
+Dalam detak jantung, aku merasakanmu,
+Dalam setiap langkah, aku menuju padamu,
+Karena denganmu, aku menemukan rumahku." 💕<br><br><br>
+
+      
+      
+      "Di antara jutaan bintang, aku hanya melihatmu,
+Di antara ribuan kata, aku hanya mengucap 'aku cinta kamu',
+Di antara segala yang ada, aku hanya membutuhkanmu." 💕<br><br>
+
+      "Aku tidak tahu apa yang aku cari,
+Tapi aku tahu aku menemukannya di kamu,
+Aku tidak tahu apa yang membuatku lengkap,
+Tapi aku tahu itu adalah kamu, hanya kamu." 😊<br><br>
+      
+      
+      💖 💖 💖 I LOVE YOU WAWA 💖 💖 💖 💖
+    </p>
+  </div>
+</div>
+
+<script>
+  function checkPassword() {
+    var input = document.getElementById("password").value;
+    var correctPassword = "10032026"; // ganti tanggal jadian
+
+    if (input === correctPassword) {
+      document.getElementById("loginPage").style.display = "none";
+      document.getElementById("lovePage").style.display = "block";
+    } else {
+      document.getElementById("error").innerText = "Salah 😢 coba lagi ya";
+    }
+  }
+</script>
+
+</body>
+</html>
